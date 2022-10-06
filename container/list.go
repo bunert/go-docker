@@ -3,6 +3,7 @@ package container
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"strconv"
@@ -47,6 +48,7 @@ type ListOption func(config *ListConfig)
 
 // List fetches a list of containers.
 func (s *Service) List(ctx context.Context, opts ...ListOption) ([]containerapi.Container, error) {
+	fmt.Println("TEST LIST HEHE")
 	cfg := ListConfig{
 		Limit: -1,
 	}
